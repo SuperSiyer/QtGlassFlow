@@ -1,0 +1,26 @@
+Source: qtglassflow
+Section: libs
+Priority: optional
+Maintainer: wangbo <wangbo@kylinos.cn>
+Build-Depends: debhelper (>= 9), qtbase5-dev(>= 5.6.0), libqt5opengl5-dev, pkg-config
+Standards-Version: 4.5.1
+
+Package: libqtglassflow0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Qt/OpenGL liquid glass effect rendering library
+ A lightweight library providing real-time liquid glass visual effects
+ with SDF-based superellipse shapes and smooth-union sticky bridging.
+
+Package: libqtglassflow-dev
+Architecture: any
+Section: libdevel
+Depends: libqtglassflow0 (= ${binary:Version}), qtbase5-dev, ${misc:Depends}
+Description: Qt liquid glass effect library - development files
+ Headers and pkg-config file for libqtglassflow.
+
+Package: qtglassflow-demo
+Architecture: any
+Depends: libqtglassflow0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Qt liquid glass effect demo application
+ Interactive demo showing draggable glass objects with sticky bridging.

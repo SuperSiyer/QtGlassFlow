@@ -1,0 +1,3 @@
+usr/include/qtglassflow/*
+usr/lib/*/libqtglassflow.so
+usr/lib/*/pkgconfig/qtglassflow.pc

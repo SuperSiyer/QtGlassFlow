@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+export QT_SELECT := qt5
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	qmake qtglassflow.pro PREFIX=/usr INSTALL_ROOT=$(CURDIR)/debian/tmp
+
+override_dh_auto_install:
+	dh_auto_install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	# Generate and install .pc file
+	MULTIARCH=$$(dpkg-architecture -qDEB_HOST_MULTIARCH) && \
+	sed "s|__MULTIARCH__|$$MULTIARCH|g" qtglassflow.pc.in > qtglassflow.pc && \
+	install -Dm644 qtglassflow.pc \
+	    $(CURDIR)/debian/tmp/usr/lib/$$MULTIARCH/pkgconfig/qtglassflow.pc

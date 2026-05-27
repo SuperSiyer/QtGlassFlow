@@ -1,0 +1,8 @@
+qtglassflow (0.1.0) unstable; urgency=medium
+
+  * Initial release.
+  * SDF-based superellipse glass shapes with smooth-union sticky bridging.
+  * Real-time refraction, convex dome lighting, and sub-pixel anti-aliasing.
+  * Interactive demo with parameter tuning panel.
+
+ -- wangbo <wangbo@kylinos.cn>  Sun, 25 May 2025 18:00:00 +0800

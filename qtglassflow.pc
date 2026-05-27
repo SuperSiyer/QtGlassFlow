@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/qtglassflow
+
+Name: QtGlassFlow
+Description: Qt/OpenGL liquid glass effect rendering library
+Version: 0.1.0
+Requires: Qt5Core Qt5Gui Qt5Widgets Qt5OpenGL
+Libs: -L${libdir} -lqtglassflow
+Cflags: -I${includedir}
